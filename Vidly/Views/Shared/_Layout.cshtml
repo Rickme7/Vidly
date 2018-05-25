@@ -10,7 +10,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body onload="window.history.forward();">
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()
