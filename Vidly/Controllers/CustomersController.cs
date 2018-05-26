@@ -70,11 +70,11 @@ namespace Vidly.Controllers
                 return View("CustomerForm", viewModel);
             }
 
-            if (customer.Id == 0)
+            if (customer.Id == 0) // Se crea un nuevo cliente
             {
                 _context.Customers.Add(customer);
             }
-            else
+            else   // Se actualizan los datos de un cliente existente
             {
                 var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
 
